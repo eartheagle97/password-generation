@@ -1,4 +1,12 @@
+:root {
+  --primary-color: #ffe600;
+  --secondary-color: #a5f3fc;
+}
 .App {
+  background-color: black;
+  height: 100vh;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
@@ -13,26 +21,154 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  border: 1px solid var(--secondary-color);
+}
+
+header {
+  width: 100%;
+  padding: 10px;
+}
+
+.title{
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: left;
+  color: var(--primary-color);
+  line-height: 2.5rem;
+}
+
+.password-history-list {
+  max-height: 200px; /* Adjust the height as needed */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 10px;
+}
+
+.footer {
+  font-size: small;
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+  border: 2px solid var(--secondary-color);
+}
+
+.input-group input {
+  width: 100%;
+  padding-right: 2rem; /* Make room for the button */
+}
+
+.input-group button {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  border: none;
+  background: transparent;
+}
+
+input[type="text"] {
+  background: black;
+  color: var(--secondary-color);
+}
+
+
+/* Slider CSS */
+/* Container to hold the slider and the value display */
+.range-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style for the range input */
+input[type="range"] {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 2px; /* Specified height */
+  background: var(--secondary-color); /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (cross-browser) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style for the thumb (the slider control) - normal state */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  opacity: 1;
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  background: var(--primary-color); /* Primary background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  background: var(--primary-color); /* Primary background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* Style for the thumb (the slider control) - active state */
+input[type="range"]:active::-webkit-slider-thumb {
+  background: #ecdf52; /* Dark-grey background on hover */
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  background: #ecdf52; /* Dark-grey background on hover */
+}
+
+/* Style for the value display */
+output {
+  padding-left: 10px; /* Space between the slider and the value display */
+  color: #fff; /* White text color */
+}
+
+/* CheckBox CSS */
+/* Hide the default checkbox */
+.checkbox-container input {
+  display: none;
+}
+
+/* Create a custom checkbox */
+.checkbox-container .checkmark {
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  background-color: black;
+  border: 2px solid var(--primary-color);
+  position: relative;
+  cursor: pointer;
+}
+
+/* When the checkbox is checked */
+.checkbox-container input:checked + .checkmark {
+  background-color: var(--primary-color);
+}
+
+/* Style the checkmark/indicator (hidden when not checked) */
+.checkbox-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked + .checkmark:after {
+  display: flex;
+}
+
+/* Style the checkmark to be a black tick */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
