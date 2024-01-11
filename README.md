@@ -52,3 +52,11 @@ To run this application locally, follow these steps:
 ## Contributing
 
 Contributions to improve the application are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Support
+
+If you enjoyed Password Generation and would like to support the development, consider buying me a coffee! ☕️
+
+[![Buy Me a Coffee](https://camo.githubusercontent.com/12f516d86d600c89a6abd2326256045c27325ad7c8532c0d36772965a4923be0/68747470733a2f2f7777772e6275796d6561636f666665652e636f6d2f6173736574732f696d672f637573746f6d5f696d616765732f6f72616e67655f696d672e706e67)](https://www.buymeacoffee.com/kairavpateu)
+
+Your support helps keep the adventure alive! 🚀
